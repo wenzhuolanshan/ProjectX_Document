@@ -1,0 +1,62 @@
+==============leave======================
+/leave/submit
+	post:申请休假
+/leave/generate
+	post:录入/激活特殊假期，婚嫁、产假、陪产,etc
+/leave/remain
+	get:查看剩余假期
+/leave/details
+	get:查看全部请假请求
+/leave/update
+	put:更新请假信息，审批/修改/关闭请假工作流
+
+===============OT============================
+/ot/submit
+	post:申请加班
+/ot/list
+	get:查看时间范围内加班记录
+/ot/update
+	put:更新加班请求信息，审批/关闭加班工作流
+/ot/repayment
+	put:换钱、换休
+======================用户模块====================
+/user/list
+	get:获取用户列表，根据传入参数获取所有RM信息，获取RM信息（已休假RM除外），包括是否可用状态。#请假时backup的选择
+/user/{ehr}
+	get:根据ehr获取用户信息
+/user/{ehr}
+	put:根据ehr更新用户信息、修改密码、设置用户的可用状态
+/user/add
+	post:用户注册（暂不做）/导入
+/user/忘记密码
+=====================顶级部门=====================
+/dept/list
+	get:获取组织架构列表
+/dept/add
+	post:添加组织架构信息
+/dept/{id}
+	put:修改组织架构信息，修改组织架构可用状态
+====================project===========================
+/project/list
+	get:获取项目列表
+/project/add
+	post:添加项目
+/project/{id}
+	put:更新项目
+user-project（虚拟）-dept
+
+user-project-dept
+====================rights=======================
+
+====================角色=========================
+/role/list
+	get:获取角色
+/role/add
+	post:增加角色
+/role/{id}
+	put:修改角色信息
+======================message=====================
+#请假、加班工作流消息推送
+=======================
+/login
+	post:可以通过ehr/telephoneNo等登录
