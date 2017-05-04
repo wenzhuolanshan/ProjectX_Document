@@ -1,0 +1,22 @@
+=====leave========
+/leave/submit
+	post:申请休假
+/leave/generate
+	post:录入/激活特殊假期，婚嫁、产假、陪产,etc
+/leave/remain
+	get:查看剩余假期
+/leave/details
+	get:查看全部请假请求
+/leave/update
+	put:更新请假信息，审批/修改/关闭请假工作流
+
+======OT==========
+/ot/submit
+	post:申请加班
+	Phony
+/ot/list
+	get:查看时间范围内加班记录
+/ot/update
+	put:更新加班请求信息，审批/关闭加班工作流
+/ot/repayment
+	put:换钱、换休
